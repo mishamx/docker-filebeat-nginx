@@ -2,12 +2,12 @@ filebeat:
     prospectors:
         -
             paths:
-                - "/var/log/nginx/nginx_access.log"
+                - "/var/log/nginx/*access.log"
             document_type: nginx-access
             encoding: utf-8
         -
             paths:
-                - "/var/log/nginx/nginx_error.log"
+                - "/var/log/nginx/*error.log"
             document_type: nginx-error
             encoding: utf-8
 output:
